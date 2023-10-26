@@ -1,9 +1,12 @@
 ## Termux VNC Xfce GUI
 
+
+
 ### Graphical Environment
 This article is only applicable only to Termux installations running on Android 7.0 or higher.
 
 * Termux provides support for programs that use X Window System. However, there no hardware acceleration for rendering and user will have to install a third party application to view graphical output.
+
 
 ### Enabling the X11 Repository
 X11 packages are available in a separate APT repository. You can enable it by running the following command:
@@ -13,6 +16,7 @@ X11 packages are available in a separate APT repository. You can enable it by ru
 It will automatically add appropriate sources.list file and PGP key.
 
 To disable this repository, you need to uninstall package x11-repo.
+
 
 ### Setting up VNC
 Server
@@ -70,3 +74,28 @@ Name:Termux
 
 If you are using VNC client on a computer using the same network as the phone does, make sure you correctly start a VNC session and know the IP address of the device.
 
+
+
+### Install XFCE
+Recommended way of installation is through metapackage and not the separate components:
+
+    pkg install xfce4
+
+VNC server startup configuration (~/.vnc/xstartup) should contain only
+
+    nano ~/.vnc/xstartup
+
+and replace with this
+
+    #!/data/data/com.termux/files/usr/bin/sh
+    xfce4-session &
+
+Additional recommended packages for installation:
+
+    apt install netsurf
+    
+netsurf - Simple graphical web browser. Javascript is not supported.
+
+    apt install xfce4-terminal
+    
+xfce4-terminal - Terminal emulator for XFCE. It is not included as part of XFCE installation to allow use of aterm or st.
