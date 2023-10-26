@@ -5,7 +5,7 @@
 ### Graphical Environment
 This article is only applicable only to Termux installations running on Android 7.0 or higher.
 
-* Termux provides support for programs that use X Window System. However, there no hardware acceleration for rendering and user will have to install a third party application to view graphical output.
+Termux provides support for programs that use X Window System. However, there no hardware acceleration for rendering and user will have to install a third party application to view graphical output.
 
 
 ### Enabling the X11 Repository
@@ -99,3 +99,12 @@ netsurf - Simple graphical web browser. Javascript is not supported.
     apt install xfce4-terminal
     
 xfce4-terminal - Terminal emulator for XFCE. It is not included as part of XFCE installation to allow use of aterm or st.
+
+
+Run: 
+
+    vncserver -localhost
+
+remember the response of host like; localhost:0 localhost:1 localhost:2 
+
+go to RealVNC and rename the host address place your password tap ok...
