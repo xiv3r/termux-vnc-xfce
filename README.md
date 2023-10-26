@@ -107,4 +107,7 @@ Run:
 
 remember the response of host like; localhost:0 localhost:1 localhost:2 
 
-go to [RealVNC](https://play.google.com/store/apps/details?id=com.realvnc.server) and rename the host address place your password tap ok...
+``E.g vncserver -localhost
+New 'localhost:3 ()' desktop is localhost:3
+ ``
+then go to [RealVNC](https://play.google.com/store/apps/details?id=com.realvnc.server) and rename the host address place your password tap ok...
